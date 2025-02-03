@@ -47,7 +47,7 @@
   align-items: center;
   text-decoration: none;
   color: white;
-  background-color: #444;
+  background-color: #d9a8a8;
   padding: 1.5rem;
   border-radius: 10px;
   width: 120px;
@@ -95,4 +95,28 @@
   .social-link span {
     font-size: 0.9rem;
   }
+}
+
+.social-icon {
+  width: 30px;  /* Adjust the size of the image */
+  height: 30px; /* Ensure the image remains square */
+  margin-right: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.social-link:hover {
+  color: #007bff;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

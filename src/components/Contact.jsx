@@ -1,14 +1,12 @@
 import React from "react";
 import "../styles/Contact.css";
-import {
-  FaInstagram,
-  FaGithub,
-  FaYoutube,
-  FaTwitter,
-  FaLinkedin,
-  FaEnvelope,
-  FaDev,
-} from "react-icons/fa";
+import insta from "../images/social/insta.png";
+import github from "../images/social/github.png";
+import youtube from "../images/social/youtube.png";
+import twitter from "../images/social/twitter.png";
+import linkedin from "../images/social/linkedin.png";
+import mail from "../images/social/mail.png";
+
 
 const Contact = () => {
   return (
@@ -21,7 +19,11 @@ const Contact = () => {
           rel="noopener noreferrer"
           className="social-link"
         >
-          <FaInstagram className="social-icon" />
+          <img
+            src={insta} // Replace with your Instagram image URL
+            alt="Instagram"
+            className="social-icon"
+          />
           <span>Instagram</span>
         </a>
         <a
@@ -30,7 +32,11 @@ const Contact = () => {
           rel="noopener noreferrer"
           className="social-link"
         >
-          <FaGithub className="social-icon" />
+          <img
+            src={github}// Replace with your GitHub image URL
+            alt="GitHub"
+            className="social-icon"
+          />
           <span>GitHub</span>
         </a>
         <a
@@ -39,7 +45,11 @@ const Contact = () => {
           rel="noopener noreferrer"
           className="social-link"
         >
-          <FaYoutube className="social-icon" />
+          <img
+            src={youtube} // Replace with your YouTube image URL
+            alt="YouTube"
+            className="social-icon"
+          />
           <span>YouTube</span>
         </a>
         <a
@@ -48,7 +58,11 @@ const Contact = () => {
           rel="noopener noreferrer"
           className="social-link"
         >
-          <FaTwitter className="social-icon" />
+          <img
+            src={twitter} // Replace with your Twitter image URL
+            alt="Twitter"
+            className="social-icon"
+          />
           <span>Twitter</span>
         </a>
         <a
@@ -57,7 +71,11 @@ const Contact = () => {
           rel="noopener noreferrer"
           className="social-link"
         >
-          <FaLinkedin className="social-icon" />
+          <img
+            src={linkedin} // Replace with your LinkedIn image URL
+            alt="LinkedIn"
+            className="social-icon"
+          />
           <span>LinkedIn</span>
         </a>
         <a
@@ -66,18 +84,13 @@ const Contact = () => {
           rel="noopener noreferrer"
           className="social-link"
         >
-          <FaEnvelope className="social-icon" />
+          <img
+            src={mail}
+            className="social-icon"
+          />
           <span>Email</span>
         </a>
-        <a
-          href="https://dev.to"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-link"
-        >
-          <FaDev className="social-icon" />
-          <span>Dev.to</span>
-        </a>
+        
       </div>
     </section>
   );
