@@ -64,3 +64,36 @@
     font-size: 1.2rem;
   }
 }
+
+/* Scroll arrow styling */
+.scroll-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.arrow-image {
+  width: 40px; /* Adjust size as needed */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.scroll-arrow:hover .arrow-image {
+  transform: translateY(5px); /* Slight hover effect */
+}
+
+/* Bounce animation for the arrow */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}

@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles/Projects.css";
-import { FaChevronDown } from 'react-icons/fa';
-import ScrollToSection from './ScrollToSection';
+import chevron from "../images/social/chevron.png";
+import ScrollToSection from "./ScrollToSection";
+
 const Projects = () => {
   const projects = [
     {
@@ -23,24 +24,34 @@ const Projects = () => {
     },
     {
       title: "WeatherNow - Live Weather App",
-      description: "A real-time weather forecasting app with location-based weather updates.",
+      description:
+        "A real-time weather forecasting app with location-based weather updates.",
       url: "https://weathernow.app",
     },
     {
       title: "ChatterBox - Real-time Chat App",
-      description: "A real-time chat application with end-to-end encryption and group chats.",
-      url: "https://chatterbox.app"
+      description:
+        "A real-time chat application with end-to-end encryption and group chats.",
+      url: "https://chatterbox.app",
     },
     {
       title: "LearnSphere - E-learning Platform",
-      description: "An online learning portal offering courses in programming, design, and business skills.",
-      url: "https://learnsphere.com"
+      description:
+        "An online learning portal offering courses in programming, design, and business skills.",
+      url: "https://learnsphere.com",
     },
   ];
 
- 
   const handleProjectClick = (url) => {
-    window.open(url, "_blank"); 
+    window.open(url, "_blank");
+  };
+
+  // Function to scroll to the target section
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -63,9 +74,9 @@ const Projects = () => {
           </div>
         ))}
       </div>
-      <ScrollToSection targetId="contact" className="scroll-arrow">
-        <FaChevronDown size={40} color="black" />
-      </ScrollToSection>
+      <div className="scroll-arrow" onClick={scrollToContact}>
+        <img src={chevron} alt="Scroll down" className="arrow-image" />
+      </div>
     </section>
   );
 };

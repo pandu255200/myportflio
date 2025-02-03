@@ -1,9 +1,17 @@
 import React from "react";
 import "../styles/Home.css";
-import { FaChevronDown } from "react-icons/fa";
+import chevron from '../images/social/chevron.png';
 import ScrollToSection from "./ScrollToSection";
 
 const Hero = () => {
+  // Function to scroll to the target section
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="home" className="hero">
       <div className="hero-content">
@@ -18,7 +26,7 @@ const Hero = () => {
         </p>
       </div>
       <ScrollToSection targetId="about" className="scroll-arrow">
-        <FaChevronDown size={40} color="white" />
+        <img src={chevron} alt="Scroll down" className="arrow-image" />
       </ScrollToSection>
     </section>
   );
